@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:text="tex2t"
+        android:text="tex23t"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
 
