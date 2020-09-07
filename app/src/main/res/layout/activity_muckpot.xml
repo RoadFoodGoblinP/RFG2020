@@ -1,140 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context=".Muckpot">
 
-    <!--컨텐츠 영역 시작-->
-    <androidx.appcompat.widget.Toolbar
+    <LinearLayout
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:background="#FF9800">
+        android:layout_height="120dp">
+
+        <ImageView
+            android:src="@drawable/ic_launcher_background"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
 
         <LinearLayout
             android:gravity="center_vertical"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal">
-            <ImageView
-                android:src="@android:color/holo_blue_bright"
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
-            <ImageView
-                android:src="@android:color/holo_green_light"
-                android:layout_width="200dp"
-                android:layout_height="30dp"/>
-
-        </LinearLayout>
-    </androidx.appcompat.widget.Toolbar>
-
-    <!-- 먹팟 리스트 시작 -->
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
+            android:layout_marginLeft="20dp"
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <LinearLayout
-                android:layout_margin="15dp"
-                android:gravity="center"
                 android:orientation="horizontal"
-                android:layout_width="match_parent"
-                android:layout_height="120dp">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
-                <ImageView
-                    android:id="@+id/MuckImg"
-                    android:src="@drawable/ic_launcher_background"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"/>
+                <TextView
+                    android:text="제목"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
 
-                <LinearLayout
-                    android:gravity="center_vertical"
-                    android:layout_marginLeft="20dp"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:id="@+id/MuckTitle"
-                            android:textSize="18dp"
-                            android:text="제목"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                        <View
-                            android:layout_width="10dp"
-                            android:layout_height="0dp"/>
-
-                        <TextView
-                            android:id="@+id/MuckTime"
-                            android:textSize="12dp"
-                            android:text="시간"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-
-                    <TextView
-                        android:id="@+id/MuckTextPreview"
-                        android:textSize="14dp"
-                        android:layout_marginTop="18dp"
-                        android:layout_marginBottom="18dp"
-                        android:text="내용"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-
-                    <LinearLayout
-                        android:orientation="horizontal"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-
-                        <TextView
-                            android:id="@+id/MuckLocation"
-                            android:textSize="13dp"
-                            android:text="위치"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-
-                        <View
-                            android:layout_weight="10"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"/>
-
-                        <ImageView
-                            android:src="@drawable/ic_launcher_background"
-                            android:layout_width="17dp"
-                            android:layout_height="17dp"/>
-
-                        <View
-                            android:layout_weight="0.4"
-                            android:layout_width="0dp"
-                            android:layout_height="0dp"/>
-
-                        <TextView
-                            android:id="@+id/MuckTotalMember"
-                            android:textSize="13dp"
-                            android:text="1/5"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
-                </LinearLayout>
+                <TextView
+                    android:text="시간"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
             </LinearLayout>
 
-            <View
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_centerInParent="true"
-                android:background="#B8B8B8"/>
+            <TextView
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="18dp"
+                android:text="내용"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:text="위치"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <View
+                    android:layout_weight="10"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+                <ImageView
+                    android:src="@drawable/ic_launcher_background"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"/>
+
+                <View
+                    android:layout_weight="0.4"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"/>
+
+                <TextView
+                    android:text="1/5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
         </LinearLayout>
-    </ScrollView>
-</LinearLayout>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

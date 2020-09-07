@@ -8,15 +8,13 @@
     tools:context=".Feed">
 
     <!--툴바 영역 시작-->
-    <!--툴바 영역 끝-->
-
-    <!--컨텐츠 영역 시작-->
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="#FF9800">
 
         <LinearLayout
+            android:layout_marginRight="15dp"
             android:gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -25,14 +23,34 @@
                 android:src="@android:color/holo_blue_bright"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:text="길거리 먹깨비"
+                    android:textColor="#fff"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
             <ImageView
-                android:src="@android:color/holo_green_light"
-                android:layout_width="200dp"
+                android:src="@android:color/holo_blue_bright"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:src="@android:color/holo_blue_bright"
+                android:layout_width="30dp"
                 android:layout_height="30dp"/>
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
+    <!--툴바 영역 끝-->
 
+    <!--컨텐츠 영역 시작-->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">

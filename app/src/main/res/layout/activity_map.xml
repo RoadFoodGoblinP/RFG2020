@@ -1,9 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Map">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <!--툴바 영역 시작-->
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#FF9800">
+
+        <LinearLayout
+            android:layout_marginRight="15dp"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+            <ImageView
+                android:src="@android:color/holo_blue_bright"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+            <LinearLayout
+                android:gravity="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:src="@android:color/holo_green_light"
+                    android:layout_width="200dp"
+                    android:layout_height="30dp"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_marginLeft="5dp"
+                android:src="@android:color/holo_blue_bright"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
+
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+    <!--툴바 영역 끝-->
+
+</LinearLayout>

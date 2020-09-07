@@ -10,15 +10,15 @@
         android:id="@+id/map_navigation"
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/edit"/>
+        android:icon="@drawable/map"/>
     <item
         android:id="@+id/muckpot_navigation"
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/location"/>
+        android:icon="@drawable/muckpot"/>
     <item
         android:id="@+id/search_navigation"
         app:showAsAction="always"
         android:enabled="true"
-        android:icon="@drawable/myinfo"/>
+        android:icon="@drawable/search"/>
 </menu>
