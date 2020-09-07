@@ -2,22 +2,22 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/navigation_home"
+        android:id="@+id/feed_navigation"
         app:showAsAction="always"
         android:enabled="true"
         android:icon="@drawable/home"/>
     <item
-        android:id="@+id/navigation_add"
+        android:id="@+id/map_navigation"
         app:showAsAction="always"
         android:enabled="true"
         android:icon="@drawable/edit"/>
     <item
-        android:id="@+id/navigation_nearFood"
+        android:id="@+id/muckpot_navigation"
         app:showAsAction="always"
         android:enabled="true"
         android:icon="@drawable/location"/>
     <item
-        android:id="@+id/navigation_myInfo"
+        android:id="@+id/search_navigation"
         app:showAsAction="always"
         android:enabled="true"
         android:icon="@drawable/myinfo"/>
