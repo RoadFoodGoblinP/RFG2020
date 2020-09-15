@@ -74,7 +74,7 @@
 
                 <!-- 먹팟 썸네일 이미지 -->
                 <ImageView
-                    android:id="@+id/MuckImg"
+                    android:id="@+id/muckImg"
                     android:src="@drawable/ic_launcher_background"
                     android:layout_width="100dp"
                     android:layout_height="100dp"/>
@@ -94,14 +94,14 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/MuckTitle"
+                            android:id="@+id/muckTitle"
                             android:textSize="18dp"
                             android:text="제목"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
                         <TextView
-                            android:id="@+id/MuckTime"
+                            android:id="@+id/muckTime"
                             android:textSize="13dp"
                             android:text="시간"
                             android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
 
                     <!-- 내용 미리보기 -->
                     <TextView
-                        android:id="@+id/MuckTextPreview"
+                        android:id="@+id/muckTextPreview"
                         android:textSize="15dp"
                         android:layout_marginTop="18dp"
                         android:layout_marginBottom="18dp"
@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/MuckLocation"
+                            android:id="@+id/muckLocation"
                             android:textSize="13dp"
                             android:text="위치"
                             android:layout_width="wrap_content"
@@ -147,7 +147,7 @@
                             android:layout_height="0dp"/>
 
                         <TextView
-                            android:id="@+id/MuckTotalMember"
+                            android:id="@+id/muckTotalMember"
                             android:textSize="13dp"
                             android:text="1/5"
                             android:layout_width="wrap_content"
