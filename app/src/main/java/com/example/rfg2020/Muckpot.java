@@ -14,24 +14,24 @@ import android.widget.TextView;
 public class Muckpot extends Fragment {
     private View  view;
 
-    ImageView MuckImg;
-    TextView MuckTitle;
-    TextView MuckTime;
-    TextView MuckTextPreview;
-    TextView MuckLocation;
-    TextView MuckTotalMember;
+    ImageView muckImg;
+    TextView muckTitle;
+    TextView muckTime;
+    TextView muckTextPreview;
+    TextView muckLocation;
+    TextView muckTotalMember;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_muckpot, container, false);
 
-        MuckImg = view.findViewById(R.id.MuckImg);
-        MuckTitle = view.findViewById(R.id.MuckTitle);
-        MuckTime = view.findViewById(R.id.MuckTime);
-        MuckTextPreview = view.findViewById(R.id.MuckTextPreview);
-        MuckLocation = view.findViewById(R.id.MuckLocation);
-        MuckTotalMember = view.findViewById(R.id.MuckTotalMember);
+        muckImg = view.findViewById(R.id.muckImg);
+        muckTitle = view.findViewById(R.id.muckTitle);
+        muckTime = view.findViewById(R.id.muckTime);
+        muckTextPreview = view.findViewById(R.id.muckTextPreview);
+        muckLocation = view.findViewById(R.id.muckLocation);
+        muckTotalMember = view.findViewById(R.id.muckTotalMember);
 
         return view;
     }
