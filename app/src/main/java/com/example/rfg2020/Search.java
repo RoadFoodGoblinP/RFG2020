@@ -2,13 +2,15 @@ package com.example.rfg2020;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.google.android.material.tabs.TabLayout;
 
 public class Search extends Fragment {
     private View view;
@@ -18,6 +20,11 @@ public class Search extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_search, container, false);
 
+        ViewPager vp = view.findViewById(R.id.searchViewpager);
+        VPAdapter adapter = new VPAdapter(getActivity().getSupportFragmentManager());
+        vp.setAdapter(adapter);
+
         return view;
     }
+
 }

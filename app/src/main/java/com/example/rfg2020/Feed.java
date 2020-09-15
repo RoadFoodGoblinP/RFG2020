@@ -15,7 +15,7 @@ import android.widget.ImageView;
 
 public class Feed extends Fragment {
     private View view;
-    ImageView feed_profile;
+    private ImageView feed_profile;
 
     @Nullable
     @Override
