@@ -6,6 +6,7 @@ import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.util.Log;
@@ -16,19 +17,22 @@ import com.naver.maps.geometry.LatLng;
 import com.naver.maps.map.LocationTrackingMode;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
+import com.naver.maps.map.NaverMapOptions;
 import com.naver.maps.map.OnMapReadyCallback;
+import com.naver.maps.map.UiSettings;
+import com.naver.maps.map.overlay.LocationOverlay;
 import com.naver.maps.map.overlay.Marker;
+import com.naver.maps.map.overlay.OverlayImage;
 import com.naver.maps.map.util.FusedLocationSource;
+import com.naver.maps.map.widget.LocationButtonView;
 
 public class Map extends Fragment implements OnMapReadyCallback {
     private static final String TAG = "activity_map";
     private View view;
 
     private static final int GPS_ENABLE_REQUEST_CODE = 2001;
-    private static final int PERMISSION_REQUEST_CODE = 100;
-    private static final String[] PERMISSIONS = {
-            Manifest.permission.ACCESS_FINE_LOCATION,
-            Manifest.permission.ACCESS_COARSE_LOCATION};
+    private static final int PERMISSION_REQUEST_CODE = 1000;
+    private static final String[] PERMISSIONS = {Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION};
 
     private FusedLocationSource mLocationSource;
     private NaverMap mNaverMap;
@@ -50,8 +54,15 @@ public class Map extends Fragment implements OnMapReadyCallback {
         mapFragment.getMapAsync(this);
 
         // 위치를 반환하는 구현체인 FusedLocationSource 생성
-        mLocationSource =
-                new FusedLocationSource(this, PERMISSION_REQUEST_CODE);
+        mLocationSource = new FusedLocationSource(this, PERMISSION_REQUEST_CODE);
+
+        // 현위치 버튼
+        /*UiSettings uiSettings = mNaverMap.getUiSettings();
+        uiSettings.setLocationButtonEnabled(true); // 기본값 : false*/
+
+        /*NaverMapOptions options = new NaverMapOptions();
+        options.locationButtonEnabled(true);
+        mNaverMap.setLocationTrackingMode(LocationTrackingMode.Follow);*/
 
         view = inflater.inflate(R.layout.activity_map, container, false);
         return view;
@@ -73,7 +84,8 @@ public class Map extends Fragment implements OnMapReadyCallback {
         mNaverMap.setLocationSource(mLocationSource);
 
         // 권한확인. 결과는 onRequestPermissionsResult 콜백 매서드 호출
-        ActivityCompat.requestPermissions(getActivity(), PERMISSIONS, PERMISSION_REQUEST_CODE);
+        //ActivityCompat.requestPermissions(getActivity(), PERMISSIONS, PERMISSION_REQUEST_CODE);
+        ActivityCompat.requestPermissions(this.getActivity(), PERMISSIONS, PERMISSION_REQUEST_CODE);
     }
 
     @Override
@@ -85,7 +97,7 @@ public class Map extends Fragment implements OnMapReadyCallback {
         {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED)
             {
-                mNaverMap.setLocationTrackingMode(LocationTrackingMode.Follow);
+                mNaverMap.setLocationTrackingMode(LocationTrackingMode.Face);
             }
         }
     }
