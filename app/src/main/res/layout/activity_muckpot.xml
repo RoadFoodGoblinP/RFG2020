@@ -32,7 +32,7 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:text="길거리 먹깨비"
+                    android:text="먹팟"
                     android:textColor="#fff"
                     android:textSize="20dp"
                     android:textStyle="bold"
@@ -74,7 +74,7 @@
 
                 <!-- 먹팟 썸네일 이미지 -->
                 <ImageView
-                    android:id="@+id/muckImg"
+                    android:id="@+id/muck_Img"
                     android:src="@drawable/ic_launcher_background"
                     android:layout_width="100dp"
                     android:layout_height="100dp"/>
@@ -94,14 +94,14 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/muckTitle"
+                            android:id="@+id/muck_Title"
                             android:textSize="18dp"
                             android:text="제목"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"/>
 
                         <TextView
-                            android:id="@+id/muckTime"
+                            android:id="@+id/muck_Time"
                             android:textSize="13dp"
                             android:text="시간"
                             android:layout_width="wrap_content"
@@ -110,7 +110,7 @@
 
                     <!-- 내용 미리보기 -->
                     <TextView
-                        android:id="@+id/muckTextPreview"
+                        android:id="@+id/muck_TextPreview"
                         android:textSize="15dp"
                         android:layout_marginTop="18dp"
                         android:layout_marginBottom="18dp"
@@ -125,7 +125,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
-                            android:id="@+id/muckLocation"
+                            android:id="@+id/muck_Location"
                             android:textSize="13dp"
                             android:text="위치"
                             android:layout_width="wrap_content"
@@ -147,7 +147,7 @@
                             android:layout_height="0dp"/>
 
                         <TextView
-                            android:id="@+id/muckTotalMember"
+                            android:id="@+id/muck_TotalMember"
                             android:textSize="13dp"
                             android:text="1/5"
                             android:layout_width="wrap_content"
