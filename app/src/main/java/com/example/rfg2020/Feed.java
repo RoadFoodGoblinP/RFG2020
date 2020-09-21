@@ -44,6 +44,7 @@ public class Feed extends Fragment {
         feed_AllFeed = view.findViewById(R.id.feed_AllFeed);
         feed_WriteBtn = view.findViewById(R.id.feed_WriteBtn);
 
+        // 하나의 피드 화면으로 이동 (FeedDetail)
         feed_AllFeed.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
