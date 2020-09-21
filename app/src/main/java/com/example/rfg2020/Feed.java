@@ -33,6 +33,7 @@ public class Feed extends Fragment {
         feed_profile.setBackground(new ShapeDrawable(new OvalShape()));
         feed_profile.setClipToOutline(true);
 
+        // 회원 프로필 화면으로 이동 (UserProfile)
         feed_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

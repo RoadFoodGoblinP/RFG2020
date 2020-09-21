@@ -2,8 +2,6 @@ package com.example.rfg2020;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
@@ -17,7 +15,7 @@ public class Muckpot_Detail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_muckpot__detail);
+        setContentView(R.layout.activity_muckpot_detail);
 
         muckDetail_BackBtn = findViewById(R.id.muckDetail_BackBtn);
         muck_profile = findViewById(R.id.muck_profile);
@@ -33,6 +31,7 @@ public class Muckpot_Detail extends AppCompatActivity {
             }
         });
 
+        // 뒤로가기
         muckDetail_BackBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
