@@ -46,11 +46,6 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
 
-            <ImageView
-                android:layout_marginLeft="5dp"
-                android:src="@android:color/holo_blue_bright"
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
 
