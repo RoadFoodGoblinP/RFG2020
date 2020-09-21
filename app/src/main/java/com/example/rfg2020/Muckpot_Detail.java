@@ -2,6 +2,7 @@ package com.example.rfg2020;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
@@ -23,6 +24,7 @@ public class Muckpot_Detail extends AppCompatActivity {
         muck_profile.setBackground(new ShapeDrawable(new OvalShape()));
         muck_profile.setClipToOutline(true);
 
+        // 회원 프로필 페이지로 이동 (UserProfile)
         muck_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
