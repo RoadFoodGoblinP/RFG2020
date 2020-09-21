@@ -60,6 +60,7 @@
                 android:padding="10dp">
                 <EditText
                     android:hint="피드 내용을 입력하세요."
+                    android:textSize="20dp"
                     android:lines="10"
                     android:gravity="top|left"
                     android:inputType="textMultiLine"
@@ -81,7 +82,7 @@
                     android:layout_height="20dp"
                     android:layout_marginRight="5dp"/>
                 <TextView
-                    android:textSize="15dp"
+                    android:textSize="17dp"
                     android:text="위치 지정"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"/>

@@ -33,9 +33,9 @@
                 android:layout_height="wrap_content">
 
                 <TextView
-                    android:text="길거리 먹깨비"
+                    android:text="먹팟"
                     android:textColor="#fff"
-                    android:textSize="20dp"
+                    android:textSize="24dp"
                     android:textStyle="bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
@@ -79,8 +79,8 @@
                     <ImageView
                         android:id="@+id/muck_profile"
                         android:layout_weight="0"
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
                         android:src="@android:color/holo_blue_bright" />
 
                     <LinearLayout
@@ -101,14 +101,14 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="7dp"
                                 android:text="닉네임"
-                                android:textSize="15dp"
+                                android:textSize="20dp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="게시시간"
-                                android:textSize="12dp" />
+                                android:textSize="15dp" />
                         </LinearLayout>
 
                         <LinearLayout
@@ -118,8 +118,8 @@
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="10dp"
-                                android:layout_height="10dp"
+                                android:layout_width="15dp"
+                                android:layout_height="15dp"
                                 android:src="@android:color/holo_orange_dark" />
 
                             <TextView
@@ -127,14 +127,14 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:text="서울시 성동구 한양여대"
-                                android:textSize="12dp" />
+                                android:textSize="15dp" />
                         </LinearLayout>
                     </LinearLayout>
 
                     <ImageButton
                         android:layout_weight="0"
                         android:layout_width="20dp"
-                        android:layout_height="50dp"
+                        android:layout_height="60dp"
                         android:src="@android:color/holo_green_dark" />
                 </LinearLayout>
 
@@ -144,7 +144,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:textSize="14dp"
+                        android:textSize="17dp"
                         android:text="테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
@@ -165,7 +165,7 @@
 
                     <TextView
                         android:textStyle="bold"
-                        android:textSize="17dp"
+                        android:textSize="20dp"
                         android:text="참여자"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -174,11 +174,11 @@
                         android:layout_marginLeft="15dp"
                         android:layout_gravity="bottom"
                         android:src="@android:color/holo_blue_bright"
-                        android:layout_width="17dp"
-                        android:layout_height="17dp"/>
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
 
                     <TextView
-                        android:textSize="13dp"
+                        android:textSize="15dp"
                         android:layout_gravity="bottom"
                         android:layout_marginLeft="5dp"
                         android:text="2/5"
@@ -196,8 +196,8 @@
                     <ImageView
                         android:id="@+id/feed_Commentprofilepic"
                         android:layout_weight="0"
-                        android:layout_width="35dp"
-                        android:layout_height="35dp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
                         android:src="@android:color/holo_blue_bright" />
 
                     <LinearLayout
@@ -210,7 +210,6 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginBottom="5dp"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
 
@@ -219,8 +218,23 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="7dp"
                                 android:text="닉네임"
-                                android:textSize="13dp"
+                                android:textSize="18dp"
                                 android:textStyle="bold" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="게시시간"
+                                android:textSize="15dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
                         </LinearLayout>
 
                         <LinearLayout
@@ -230,7 +244,7 @@
                             android:orientation="horizontal">
 
                             <TextView
-                                android:textSize="11dp"
+                                android:textSize="15dp"
                                 android:text="댓글이다ㅏㅏㅏㅏㅏㅏㅏㅏ"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"/>
