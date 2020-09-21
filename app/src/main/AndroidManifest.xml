@@ -17,8 +17,6 @@
         <activity android:name=".Map" />
         <activity android:name=".Feed" />
         <activity android:name=".FeedWrite" />
-        <activity android:name=".FeedDetail" />
-        <activity android:name=".Muckpot_Detail" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -30,5 +28,7 @@
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
             android:value="swscecoixf" />
+
     </application>
+
 </manifest>
