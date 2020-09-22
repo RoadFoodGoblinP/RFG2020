@@ -65,6 +65,7 @@
 
             <!-- 리스트 전체 레이아웃 -->
             <LinearLayout
+                android:background="@drawable/feed_border"
                 android:id="@+id/muck_list"
                 android:orientation="vertical"
                 android:layout_width="match_parent"
@@ -72,21 +73,22 @@
 
                 <!-- 한 개의 먹팟 레이아웃 -->
                 <LinearLayout
-                    android:layout_margin="15dp"
+                    android:layout_marginHorizontal="10dp"
                     android:gravity="center"
                     android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="120dp">
+                    android:layout_height="130dp">
 
                     <!-- 먹팟 썸네일 이미지 -->
                     <ImageView
                         android:id="@+id/muck_Img"
                         android:src="@drawable/ic_launcher_background"
-                        android:layout_width="100dp"
-                        android:layout_height="100dp"/>
+                        android:layout_width="110dp"
+                        android:layout_height="110dp"/>
 
                     <!-- 텍스트 전체 레이아웃 -->
                     <LinearLayout
+                        android:layout_marginVertical="10dp"
                         android:paddingTop="5dp"
                         android:layout_marginLeft="15dp"
                         android:orientation="vertical"
@@ -95,6 +97,7 @@
 
                         <!-- 제목 라인 레이아웃 -->
                         <LinearLayout
+                            android:layout_gravity="top"
                             android:orientation="horizontal"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -110,7 +113,7 @@
 
                             <TextView
                                 android:id="@+id/muck_Time"
-                                android:textSize="15dp"
+                                android:textSize="14dp"
                                 android:text="게시시간"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
@@ -128,8 +131,10 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"/>
                         </LinearLayout>
+
                         <!-- 위치 라인 레이아웃 -->
                         <LinearLayout
+                            android:layout_marginRight="8dp"
                             android:layout_gravity="bottom"
                             android:orientation="horizontal"
                             android:layout_width="wrap_content"
@@ -145,26 +150,18 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
                                 android:text="서울시 성동구 한양여대"
-                                android:textSize="15dp" />
-
+                                android:textSize="14dp" />
                             <View
-                                android:layout_weight="10"
+                                android:layout_weight="7"
                                 android:layout_width="0dp"
                                 android:layout_height="0dp"/>
-
                             <ImageView
                                 android:src="@drawable/ic_launcher_background"
-                                android:layout_width="15dp"
-                                android:layout_height="15dp"/>
-
-                            <View
-                                android:layout_weight="0.4"
-                                android:layout_width="0dp"
-                                android:layout_height="0dp"/>
-
+                                android:layout_width="14dp"
+                                android:layout_height="14dp"/>
                             <TextView
                                 android:id="@+id/muck_TotalMember"
-                                android:textSize="15dp"
+                                android:textSize="14dp"
                                 android:layout_marginLeft="5dp"
                                 android:text="1/5"
                                 android:layout_width="wrap_content"
@@ -172,13 +169,6 @@
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>
-
-                <!-- 구분선 -->
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_centerInParent="true"
-                    android:background="#AFAFAF"/>
             </LinearLayout>
         </ScrollView>
     </LinearLayout>

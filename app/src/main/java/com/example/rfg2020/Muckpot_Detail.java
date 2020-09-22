@@ -36,7 +36,7 @@ public class Muckpot_Detail extends AppCompatActivity {
             }
         });
 
-        // 회원 프로필 페이지로 이동 (UserProfile)
+        // 먹팟 회원 프로필 페이지로 이동 (UserProfile)
         muck_Commentprofilepic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
