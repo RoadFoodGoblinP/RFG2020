@@ -9,6 +9,7 @@ import java.util.ArrayList;
 
 public class VPAdapter extends FragmentPagerAdapter {
     private ArrayList<Fragment> items;
+
     public VPAdapter(FragmentManager fm) {
         super(fm);
         items = new ArrayList<>();

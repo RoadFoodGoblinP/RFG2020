@@ -189,7 +189,7 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:id="@+id/feed_Commentprofilepic"
+                        android:id="@+id/muck_Commentprofilepic"
                         android:layout_weight="0"
                         android:layout_width="50dp"
                         android:layout_height="50dp"

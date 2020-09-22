@@ -5,6 +5,8 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,15 +18,11 @@ import android.widget.TextView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class Muckpot extends Fragment {
-    private View  view;
+    private View view;
     private FloatingActionButton muck_WriteBtn;
 
-    ImageView muckImg;
-    TextView muckTitle;
-    TextView muckTime;
-    TextView muckTextPreview;
-    TextView muckLocation;
-    TextView muckTotalMember;
+    ImageView muckImg, muck_Img;
+    TextView muckTitle, muckTime, muckTextPreview, muckLocation, muckTotalMember;
     LinearLayout muck_list;
 
     @Nullable
@@ -40,6 +38,11 @@ public class Muckpot extends Fragment {
         muckTotalMember = view.findViewById(R.id.muck_TotalMember);
         muck_list = view.findViewById(R.id.muck_list);
         muck_WriteBtn = view.findViewById(R.id.muck_WriteBtn);
+        muck_Img = view.findViewById(R.id.muck_Img);
+
+        // 먹팟 대표사진 둥글게
+        muck_Img.setBackground(new ShapeDrawable(new OvalShape()));
+        muck_Img.setClipToOutline(true);
 
         // 하나의 먹팟 화면으로 이동 (Muckpot_Detail)
         muck_list.setOnClickListener(new View.OnClickListener() {

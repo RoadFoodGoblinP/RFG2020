@@ -10,8 +10,7 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class Muckpot_Detail extends AppCompatActivity {
-    private ImageView muckDetail_BackBtn;
-    private ImageView muck_profile;
+    private ImageView muckDetail_BackBtn, muck_profile, muck_Commentprofilepic;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,16 +19,29 @@ public class Muckpot_Detail extends AppCompatActivity {
 
         muckDetail_BackBtn = findViewById(R.id.muckDetail_BackBtn);
         muck_profile = findViewById(R.id.muck_profile);
+        muck_Commentprofilepic = findViewById(R.id.muck_Commentprofilepic);
 
+        // 회원 프로필 둥글게
         muck_profile.setBackground(new ShapeDrawable(new OvalShape()));
         muck_profile.setClipToOutline(true);
+        muck_Commentprofilepic.setBackground(new ShapeDrawable(new OvalShape()));
+        muck_Commentprofilepic.setClipToOutline(true);
 
-        // 회원 프로필 페이지로 이동 (UserProfile)
+        // 먹팟 작성자 회원 프로필 페이지로 이동 (UserProfile)
         muck_profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intent = new Intent(, UserProfile.class);
-                //startActivity(intent);
+                Intent intent = new Intent(getApplication(), UserProfile.class);
+                startActivity(intent);
+            }
+        });
+
+        // 회원 프로필 페이지로 이동 (UserProfile)
+        muck_Commentprofilepic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplication(), UserProfile.class);
+                startActivity(intent);
             }
         });
 
