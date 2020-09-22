@@ -17,6 +17,7 @@
         <activity android:name=".Map" />
         <activity android:name=".Feed" />
         <activity android:name=".FeedWrite" />
+        <activity android:name=".FeedDetail" />
         <activity android:name=".UserProfile" />
         <activity android:name=".Muckpot_Detail" />
         <activity android:name=".MainActivity">
