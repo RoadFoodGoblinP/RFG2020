@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">길거리 먹깨비</string>
+    <string name="kakao_app_key">20313f342496c47f409cb9d8d741467b</string>
 </resources>
