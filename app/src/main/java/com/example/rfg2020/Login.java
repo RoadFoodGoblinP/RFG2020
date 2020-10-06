@@ -1,44 +1,77 @@
 package com.example.rfg2020;
 
-import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.annotation.Nullable;
+import android.view.MenuItem;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import com.kakao.auth.Session;
-
-public class Login extends AppCompatActivity
-{
-    private SessionCallback sessionCallback = new SessionCallback();
-    Session session;
+public class Login extends AppCompatActivity {
+    private BottomNavigationView bottomNavigationView;
+    private FragmentManager fm;
+    private FragmentTransaction ft;
+    private Feed feed_activity;
+    private Map map_activity;
+    private Muckpot muckpot_activity;
+    private Search search_activity;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        session = Session.getCurrentSession();
-        session.addCallback(sessionCallback);
+        bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.feed_navigation:
+                        setFrag(0);
+                        break;
+                    case R.id.map_navigation:
+                        setFrag(1);
+                        break;
+                    case R.id.muckpot_navigation:
+                        setFrag(2);
+                        break;
+                    case R.id.search_navigation:
+                        setFrag(3);
+                        break;
+                }
+                return true;
+            }
+        });
+
+        feed_activity = new Feed();
+        map_activity = new Map();
+        muckpot_activity = new Muckpot();
+        search_activity = new Search();
+        setFrag(0);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-
-        // 세션 콜백 삭제
-        Session.getCurrentSession().removeCallback(sessionCallback);
-    }
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        // 카카오톡|스토리 간편로그인 실행 결과를 받아서 SDK로 전달
-        if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
-            return;
+    private void setFrag(int n) {
+        fm = getSupportFragmentManager();
+        ft = fm.beginTransaction();
+        switch (n) {
+            case 0:
+                ft.replace(R.id.main_frame, feed_activity);
+                ft.commit();
+                break;
+            case 1:
+                ft.replace(R.id.main_frame, map_activity);
+                ft.commit();
+                break;
+            case 2:
+                ft.replace(R.id.main_frame, muckpot_activity);
+                ft.commit();
+                break;
+            case 3:
+                ft.replace(R.id.main_frame, search_activity);
+                ft.commit();
+                break;
         }
-
-        super.onActivityResult(requestCode, resultCode, data);
     }
 }
 
