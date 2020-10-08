@@ -13,7 +13,6 @@ import com.kakao.auth.Session;
 
 public class MainActivity extends AppCompatActivity {
     Button Login_home;
-
     private SessionCallback sessionCallback = new SessionCallback();
     Session session;
 
