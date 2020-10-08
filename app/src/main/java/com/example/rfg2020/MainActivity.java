@@ -1,7 +1,10 @@
 package com.example.rfg2020;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,13 +12,25 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.kakao.auth.Session;
 
 public class MainActivity extends AppCompatActivity {
+    Button Login_home;
+
     private SessionCallback sessionCallback = new SessionCallback();
     Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_index);
+        setContentView(R.layout.activity_main);
+
+        Login_home = findViewById(R.id.Login_home);
+
+        Login_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplication(), Index.class);
+                startActivity(intent);
+            }
+        });
 
         session = Session.getCurrentSession();
         session.addCallback(sessionCallback);
