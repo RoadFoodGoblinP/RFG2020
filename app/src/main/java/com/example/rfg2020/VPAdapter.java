@@ -19,8 +19,12 @@ public class VPAdapter extends FragmentPagerAdapter {
 
     @NonNull
     @Override
-    public Fragment getItem(int position) { return items.get(position); }
+    public Fragment getItem(int position) {
+        return items.get(position);
+    }
 
     @Override
-    public int getCount() { return items.size(); }
+    public int getCount() {
+        return items.size();
+    }
 }

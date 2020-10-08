@@ -61,7 +61,6 @@ public class Muckpot extends Fragment {
                 startActivity(intent);
             }
         });
-
         return view;
     }
 }

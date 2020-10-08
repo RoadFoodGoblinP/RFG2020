@@ -5,11 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-import android.view.MenuItem;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
+
 import com.kakao.auth.Session;
 
 public class MainActivity extends AppCompatActivity {

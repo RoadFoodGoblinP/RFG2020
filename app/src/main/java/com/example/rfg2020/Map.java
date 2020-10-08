@@ -5,6 +5,7 @@ import androidx.annotation.Nullable;
 import androidx.core.app.ActivityCompat;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
+
 import android.Manifest;
 import android.os.Bundle;
 import android.util.Log;
@@ -12,9 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-import com.naver.maps.geometry.Coord;
-import com.naver.maps.geometry.LatLng;
+
 import com.naver.maps.map.LocationTrackingMode;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
@@ -23,8 +22,7 @@ import com.naver.maps.map.OnMapReadyCallback;
 import com.naver.maps.map.UiSettings;
 import com.naver.maps.map.util.FusedLocationSource;
 
-public class Map extends Fragment implements OnMapReadyCallback
-{
+public class Map extends Fragment implements OnMapReadyCallback {
     private static final String TAG = "activity_map";
     private View view;
     private FusedLocationSource mLocationSource;
@@ -35,13 +33,11 @@ public class Map extends Fragment implements OnMapReadyCallback
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState)
-    {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         // 지도 객체 생성
         FragmentManager fm = getActivity().getSupportFragmentManager();
         MapFragment mapFragment = (MapFragment) fm.findFragmentById(R.id.map);
-        if (mapFragment == null)
-        {
+        if (mapFragment == null) {
             mapFragment = MapFragment.newInstance();
             fm.beginTransaction().add(R.id.map, mapFragment).commit();
         }
@@ -58,8 +54,7 @@ public class Map extends Fragment implements OnMapReadyCallback
     }
 
     @Override
-    public void onMapReady(@NonNull NaverMap naverMap)
-    {
+    public void onMapReady(@NonNull NaverMap naverMap) {
         Log.d(TAG, "onMapReady");
 
         // NaverMap 객체 받아서 NaverMap 객체에 위치 소스 지정
@@ -86,10 +81,8 @@ public class Map extends Fragment implements OnMapReadyCallback
     }
 
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults)
-    {
-        if (mLocationSource.onRequestPermissionsResult(requestCode, permissions, grantResults))
-        {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+        if (mLocationSource.onRequestPermissionsResult(requestCode, permissions, grantResults)) {
             return;
         }
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);

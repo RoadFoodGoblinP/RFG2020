@@ -10,8 +10,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.google.android.material.tabs.TabLayout;
-
 public class Search extends Fragment {
     private View view;
 
@@ -26,5 +24,4 @@ public class Search extends Fragment {
 
         return view;
     }
-
 }
