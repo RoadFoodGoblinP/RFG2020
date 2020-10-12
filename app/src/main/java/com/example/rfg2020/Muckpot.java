@@ -57,7 +57,7 @@ public class Muckpot extends Fragment {
         muck_WriteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), FeedWrite.class);
+                Intent intent = new Intent(getActivity(), MuckpotWrite.class);
                 startActivity(intent);
             }
         });
