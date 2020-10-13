@@ -112,9 +112,9 @@ public class MainActivity extends AppCompatActivity {
                         Profile profile = kakaoAccount.getProfile();
 
                         if (profile != null) {
-                            Log.d("KAKAO_API", "nickname: " + profile.getNickname().toString());
-                            Log.d("KAKAO_API", "profile image: " + profile.getProfileImageUrl().toString());
-                            Log.d("KAKAO_API", "thumbnail image: " + profile.getThumbnailImageUrl().toString());
+                            Log.d("KAKAO_API", "nickname: " + profile.getNickname());
+                            Log.d("KAKAO_API", "profile image: " + profile.getProfileImageUrl());
+                            Log.d("KAKAO_API", "thumbnail image: " + profile.getThumbnailImageUrl());
 
                         } else if (kakaoAccount.profileNeedsAgreement() == OptionalBoolean.TRUE) {
                             // 동의 요청 후 프로필 정보 획득 가능
