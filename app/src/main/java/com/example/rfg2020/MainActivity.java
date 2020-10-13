@@ -45,14 +45,13 @@ public class MainActivity extends AppCompatActivity {
         btn_logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                UserManagement.getInstance()
-                        .requestLogout(new LogoutResponseCallback() {
-                            @Override
-                            public void onCompleteLogout() {
-                                Toast myToast = Toast.makeText(MainActivity.this,"로그아웃 되었습니다.", Toast.LENGTH_SHORT);
-                                myToast.show();
-                            }
-                        });
+                UserManagement.getInstance().requestLogout(new LogoutResponseCallback() {
+                    @Override
+                    public void onCompleteLogout() {
+                        Toast myToast = Toast.makeText(MainActivity.this, "로그아웃 되었습니다.", Toast.LENGTH_LONG);
+                        myToast.show();
+                    }
+                });
             }
         });
 
@@ -65,10 +64,6 @@ public class MainActivity extends AppCompatActivity {
 
         // 세션 콜백 삭제
         Session.getCurrentSession().removeCallback(sessionCallback);
-
-        // 로그인 후 페이지 넘어가기
-        Intent intent = new Intent(MainActivity.this, UserJoin.class);
-        startActivity(intent);
     }
 
     @Override
@@ -79,7 +74,6 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onActivityResult(requestCode, resultCode, data);
     }
-
 
 
     private class SessionCallback implements ISessionCallback {
@@ -135,17 +129,16 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("KAKAO_API", "nickname: " + profile.getNickname());
                             Log.d("KAKAO_API", "profile image: " + profile.getProfileImageUrl());
                             Log.d("KAKAO_API", "thumbnail image: " + profile.getThumbnailImageUrl());
-
                         } else if (kakaoAccount.profileNeedsAgreement() == OptionalBoolean.TRUE) {
                             // 동의 요청 후 프로필 정보 획득 가능
                         } else {
                             // 프로필 획득 불가
                         }
-
-                        /*// 로그인 후 페이지 넘어가기
-                        Intent intent = new Intent(MainActivity.this, UserJoin.class);
-                        startActivity(intent);*/
                     }
+
+                    // 로그인 후 페이지 넘어가기
+                    Intent intent = new Intent(MainActivity.this, UserJoin.class);
+                    startActivity(intent);
                 }
             });
         }
