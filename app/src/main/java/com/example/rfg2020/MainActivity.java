@@ -1,11 +1,11 @@
 package com.example.rfg2020;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,6 +14,7 @@ import com.kakao.auth.ISessionCallback;
 import com.kakao.auth.Session;
 import com.kakao.network.ErrorResult;
 import com.kakao.usermgmt.UserManagement;
+import com.kakao.usermgmt.callback.LogoutResponseCallback;
 import com.kakao.usermgmt.callback.MeV2ResponseCallback;
 import com.kakao.usermgmt.response.MeV2Response;
 import com.kakao.usermgmt.response.model.Profile;
@@ -22,7 +23,7 @@ import com.kakao.util.OptionalBoolean;
 import com.kakao.util.exception.KakaoException;
 
 public class MainActivity extends AppCompatActivity {
-    Button Login_home;
+    Button Login_home, btn_logout;
     private SessionCallback sessionCallback = new SessionCallback();
 
     @Override
@@ -31,12 +32,27 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Login_home = findViewById(R.id.Login_home);
+        btn_logout = findViewById(R.id.btn_logout);
 
         Login_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), Index.class);
                 startActivity(intent);
+            }
+        });
+
+        btn_logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                UserManagement.getInstance()
+                        .requestLogout(new LogoutResponseCallback() {
+                            @Override
+                            public void onCompleteLogout() {
+                                Toast myToast = Toast.makeText(MainActivity.this,"로그아웃 되었습니다.", Toast.LENGTH_SHORT);
+                                myToast.show();
+                            }
+                        });
             }
         });
 
@@ -49,6 +65,10 @@ public class MainActivity extends AppCompatActivity {
 
         // 세션 콜백 삭제
         Session.getCurrentSession().removeCallback(sessionCallback);
+
+        // 로그인 후 페이지 넘어가기
+        Intent intent = new Intent(MainActivity.this, UserJoin.class);
+        startActivity(intent);
     }
 
     @Override
@@ -57,9 +77,9 @@ public class MainActivity extends AppCompatActivity {
         if (Session.getCurrentSession().handleActivityResult(requestCode, resultCode, data)) {
             return;
         }
-
         super.onActivityResult(requestCode, resultCode, data);
     }
+
 
 
     private class SessionCallback implements ISessionCallback {
@@ -122,9 +142,9 @@ public class MainActivity extends AppCompatActivity {
                             // 프로필 획득 불가
                         }
 
-                        // 로그인 후 페이지 넘어가기
+                        /*// 로그인 후 페이지 넘어가기
                         Intent intent = new Intent(MainActivity.this, UserJoin.class);
-                        startActivity(intent);
+                        startActivity(intent);*/
                     }
                 }
             });
