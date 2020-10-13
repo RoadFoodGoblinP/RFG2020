@@ -1,5 +1,6 @@
 package com.example.rfg2020;
 
+import android.content.Intent;
 import android.util.Log;
 
 import com.kakao.auth.ISessionCallback;
@@ -17,6 +18,14 @@ public class SessionCallback implements ISessionCallback {
     @Override
     public void onSessionOpened() {
         requestMe();
+
+        /*
+        여기서부터 시작하기! -> 로그인 완료 후 사용자 프로필 설정 페이지로 넘어가기
+        세션 페이지 코드를 메인으로 놂기기 -> 세션 페이지 삭제
+        // 로그인 후 페이지 넘어가기
+        Intent intent = new Intent(MainActivity., UserJoin.class);
+        startActivity(intent);
+         */
     }
 
     // 로그인에 실패한 상태
