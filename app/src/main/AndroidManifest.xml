@@ -26,6 +26,7 @@
         <activity android:name=".FeedWrite" />
         <activity android:name=".FeedDetail" />
         <activity android:name=".UserProfile" />
+        <activity android:name=".UserJoin" />
         <activity android:name=".MuckpotDetail" />
         <activity android:name=".MainActivity">
 

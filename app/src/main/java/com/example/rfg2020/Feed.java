@@ -15,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.kakao.auth.Session;
 
 public class Feed extends Fragment {
     private View view;
@@ -30,6 +31,7 @@ public class Feed extends Fragment {
         feed_profile = view.findViewById(R.id.feed_profile);
         feed_profile.setBackground(new ShapeDrawable(new OvalShape()));
         feed_profile.setClipToOutline(true);
+
 
         // 회원 프로필 화면으로 이동 (UserProfile)
         feed_profile.setOnClickListener(new View.OnClickListener() {
@@ -62,4 +64,6 @@ public class Feed extends Fragment {
         });
         return view;
     }
+
+
 }
