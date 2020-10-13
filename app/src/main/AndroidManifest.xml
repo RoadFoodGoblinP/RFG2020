@@ -3,7 +3,9 @@
     package="com.example.rfg2020">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 인터넷 사용 권한 설정 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+
+    <!-- 인터넷 사용 권한 설정-->
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
@@ -15,8 +17,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".UserJoin"></activity>
-        <activity android:name=".Index" />
+
+        <activity android:name=".Index"/>
         <activity android:name=".Search" />
         <activity android:name=".Muckpot" />
         <activity android:name=".Map" />
@@ -26,18 +28,23 @@
         <activity android:name=".UserProfile" />
         <activity android:name=".Muckpot_Detail" />
         <activity android:name=".MainActivity">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity> <!-- 네이버 -->
+
+        </activity>
+
+        <!-- 네이버 -->
         <meta-data
             android:name="com.naver.maps.map.CLIENT_ID"
-            android:value="swscecoixf" /> <!-- 카카오 -->
+            android:value="swscecoixf" />
+
+        <!-- 카카오 -->
         <meta-data
             android:name="com.kakao.sdk.AppKey"
             android:value="@string/kakao_app_key" />
-    </application>
 
+    </application>
 </manifest>
