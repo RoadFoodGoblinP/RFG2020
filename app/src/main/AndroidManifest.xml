@@ -26,7 +26,7 @@
         <activity android:name=".FeedWrite" />
         <activity android:name=".FeedDetail" />
         <activity android:name=".UserProfile" />
-        <activity android:name=".Muckpot_Detail" />
+        <activity android:name=".MuckpotDetail" />
         <activity android:name=".MainActivity">
 
             <intent-filter>

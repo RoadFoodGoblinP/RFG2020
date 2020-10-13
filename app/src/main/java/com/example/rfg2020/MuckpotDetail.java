@@ -9,7 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-public class Muckpot_Detail extends AppCompatActivity {
+public class MuckpotDetail extends AppCompatActivity {
     private ImageView muckDetail_BackBtn, muck_profile, muck_Commentprofilepic;
 
     @Override
