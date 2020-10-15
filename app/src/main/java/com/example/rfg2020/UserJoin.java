@@ -25,6 +25,10 @@ public class UserJoin extends AppCompatActivity {
         userJoin_profilePhoto = findViewById(R.id.userJoin_profilePhoto);
         userJoin_success = findViewById(R.id.userJoin_success);
 
+        Intent intent = getIntent();
+        String nickname = intent.getExtras().getString("nickname");
+        userJoin_nickname.setText(nickname);
+
 
         userJoin_success.setOnClickListener(new View.OnClickListener() {
             @Override

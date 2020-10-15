@@ -129,6 +129,11 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("KAKAO_API", "nickname: " + profile.getNickname());
                             Log.d("KAKAO_API", "profile image: " + profile.getProfileImageUrl());
                             Log.d("KAKAO_API", "thumbnail image: " + profile.getThumbnailImageUrl());
+
+                            Intent intent = new Intent(MainActivity.this, UserJoin.class);
+                            intent.putExtra("nickname", profile.getNickname());
+                            startActivity(intent);
+
                         } else if (kakaoAccount.profileNeedsAgreement() == OptionalBoolean.TRUE) {
                             // 동의 요청 후 프로필 정보 획득 가능
                         } else {
@@ -137,8 +142,6 @@ public class MainActivity extends AppCompatActivity {
                     }
 
                     // 로그인 후 페이지 넘어가기
-                    Intent intent = new Intent(MainActivity.this, UserJoin.class);
-                    startActivity(intent);
                 }
             });
         }
