@@ -57,13 +57,14 @@
             android:gravity="center"
             android:textSize="22dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"/>
 
         <ImageView
-            android:id="@+id/userJoin_profilePhoto"
+            android:id="@+id/userJoin_profileImg"
             android:src="@drawable/ic_launcher_foreground"
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
             android:layout_marginBottom="20dp"/>
 
         <TextView

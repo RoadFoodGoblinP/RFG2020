@@ -132,6 +132,7 @@ public class MainActivity extends AppCompatActivity {
 
                             Intent intent = new Intent(MainActivity.this, UserJoin.class);
                             intent.putExtra("nickname", profile.getNickname());
+                            intent.putExtra("profileImgUrl", profile.getProfileImageUrl());
                             startActivity(intent);
 
                         } else if (kakaoAccount.profileNeedsAgreement() == OptionalBoolean.TRUE) {
