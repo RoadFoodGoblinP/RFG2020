@@ -21,9 +21,10 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:src="@android:color/holo_blue_bright"
-                android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:id="@+id/userJoin_back"
+                android:src="@drawable/back"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
             <LinearLayout
                 android:gravity="center"
                 android:layout_weight="1"
@@ -39,7 +40,7 @@
             </LinearLayout>
 
             <ImageView
-                android:src="@android:color/holo_blue_bright"
+                android:src="@android:color/transparent"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
         </LinearLayout>
@@ -72,7 +73,19 @@
                 android:id="@+id/userJoin_profileImg"
                 android:layout_width="150dp"
                 android:layout_height="150dp"
+                android:layout_gravity="center"
                 android:src="@drawable/ic_launcher_foreground" />
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_gravity="center"
+                android:background="#40000000"/>
+            <ImageView
+                android:layout_gravity="center"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/write" />
+
         </androidx.cardview.widget.CardView>
 
         <TextView

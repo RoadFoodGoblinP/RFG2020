@@ -21,7 +21,7 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:src="@android:color/holo_blue_bright"
+                android:src="@drawable/profile_default"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
 
@@ -42,9 +42,9 @@
             </LinearLayout>
 
             <ImageView
-                android:src="@android:color/holo_blue_bright"
+                android:src="@drawable/alert"
                 android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_height="25dp"/>
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
     <!--툴바 영역 끝-->

@@ -37,6 +37,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"/>
             </LinearLayout>
+            <ImageView
+                android:src="@android:color/transparent"
+                android:layout_width="30dp"
+                android:layout_height="30dp"/>
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -70,7 +74,7 @@
                         android:layout_weight="0"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@android:color/holo_blue_bright" />
+                        android:src="@drawable/profile_default" />
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -109,7 +113,7 @@
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@android:color/holo_orange_dark" />
+                                android:src="@drawable/location" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -163,7 +167,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:src="@android:color/holo_orange_light"
+                            android:src="@drawable/replies"
                             android:layout_width="25dp"
                             android:layout_height="25dp"/>
                         <TextView
@@ -180,7 +184,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:src="@android:color/holo_orange_light"
+                            android:src="@drawable/likes"
                             android:layout_width="25dp"
                             android:layout_height="25dp"/>
                         <TextView
@@ -197,7 +201,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:src="@android:color/holo_orange_light"
+                            android:src="@drawable/pictures"
                             android:layout_width="25dp"
                             android:layout_height="25dp"/>
                         <TextView
@@ -212,7 +216,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"/>
                     <ImageView
-                        android:src="@android:color/holo_green_light"
+                        android:src="@drawable/bookmark"
                         android:layout_width="25dp"
                         android:layout_height="25dp"/>
                 </LinearLayout>
@@ -237,7 +241,7 @@
                         android:layout_weight="0"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@android:color/holo_blue_bright" />
+                        android:src="@drawable/profile_default" />
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -276,7 +280,7 @@
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@android:color/holo_orange_dark" />
+                                android:src="@drawable/location" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -330,7 +334,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:src="@android:color/holo_orange_light"
+                            android:src="@drawable/replies"
                             android:layout_width="25dp"
                             android:layout_height="25dp"/>
                         <TextView
@@ -347,7 +351,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:src="@android:color/holo_orange_light"
+                            android:src="@drawable/likes"
                             android:layout_width="25dp"
                             android:layout_height="25dp"/>
                         <TextView
@@ -364,7 +368,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
-                            android:src="@android:color/holo_orange_light"
+                            android:src="@drawable/pictures"
                             android:layout_width="25dp"
                             android:layout_height="25dp"/>
                         <TextView
@@ -379,7 +383,7 @@
                         android:layout_height="0dp"
                         android:layout_weight="1"/>
                     <ImageView
-                        android:src="@android:color/holo_green_light"
+                        android:src="@drawable/bookmark"
                         android:layout_width="25dp"
                         android:layout_height="25dp"/>
 

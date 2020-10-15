@@ -24,7 +24,7 @@
             android:layout_height="match_parent"
             android:orientation="horizontal">
             <ImageView
-                android:src="@android:color/holo_blue_bright"
+                android:src="@drawable/profile_default"
                 android:layout_width="30dp"
                 android:layout_height="30dp"/>
             <LinearLayout
@@ -35,7 +35,7 @@
                 android:layout_height="wrap_content">
                 <ImageView
                     android:layout_marginRight="5dp"
-                    android:src="@android:color/holo_blue_bright"
+                    android:src="@drawable/search"
                     android:layout_width="20dp"
                     android:layout_height="20dp"/>
                 <EditText
@@ -48,9 +48,9 @@
             </LinearLayout>
             <ImageView
                 android:layout_marginLeft="5dp"
-                android:src="@android:color/holo_blue_bright"
+                android:src="@drawable/alert"
                 android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_height="25dp"/>
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -95,7 +95,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
         android:backgroundTint="#f78025"
-        android:src="@drawable/write"
+        android:src="@drawable/write_feed"
         app:borderWidth="0dp"
         app:fabSize="normal"/>
 </RelativeLayout>

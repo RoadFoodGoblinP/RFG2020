@@ -16,7 +16,7 @@ import com.bumptech.glide.Glide;
 public class UserJoin extends AppCompatActivity {
 
     EditText userJoin_nickname, userJoin_info;
-    ImageView userJoin_profileImg;
+    ImageView userJoin_back, userJoin_profileImg;
     Button userJoin_success;
 
     @Override
@@ -26,6 +26,7 @@ public class UserJoin extends AppCompatActivity {
 
         userJoin_info = findViewById(R.id.userJoin_info);
         userJoin_nickname = findViewById(R.id.userJoin_nickname);
+        userJoin_back = findViewById(R.id.userJoin_back);
         userJoin_profileImg = findViewById(R.id.userJoin_profileImg);
         userJoin_success = findViewById(R.id.userJoin_success);
         
@@ -39,6 +40,10 @@ public class UserJoin extends AppCompatActivity {
 
         userJoin_nickname.setText(nickname);
         Glide.with(this).load(profileImgUrl).into(userJoin_profileImg);
+
+        userJoin_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) { finish(); }});
 
         userJoin_success.setOnClickListener(new View.OnClickListener() {
             @Override

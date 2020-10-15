@@ -42,9 +42,9 @@
             </LinearLayout>
 
             <ImageView
-                android:src="@android:color/holo_blue_bright"
+                android:src="@drawable/alert"
                 android:layout_width="30dp"
-                android:layout_height="30dp"/>
+                android:layout_height="25dp"/>
 
         </LinearLayout>
     </androidx.appcompat.widget.Toolbar>
@@ -76,7 +76,7 @@
                         android:layout_weight="0"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@android:color/holo_blue_bright" />
+                        android:src="@drawable/profile_default" />
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -115,7 +115,7 @@
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
-                                android:src="@android:color/holo_orange_dark" />
+                                android:src="@drawable/location" />
 
                             <TextView
                                 android:layout_width="wrap_content"
@@ -170,7 +170,7 @@
                     <ImageView
                         android:layout_marginLeft="15dp"
                         android:layout_gravity="bottom"
-                        android:src="@android:color/holo_blue_bright"
+                        android:src="@drawable/number_people"
                         android:layout_width="20dp"
                         android:layout_height="20dp"/>
 
@@ -196,7 +196,7 @@
                         android:layout_weight="0"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:src="@android:color/holo_blue_bright" />
+                        android:src="@drawable/profile_default" />
 
                     <LinearLayout
                         android:layout_width="fill_parent"
