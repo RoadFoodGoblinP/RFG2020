@@ -54,22 +54,31 @@
         android:gravity="center">
         <TextView
             android:text="프로필 설정"
+            android:textStyle="bold"
             android:gravity="center"
             android:textSize="22dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"/>
+            android:layout_height="wrap_content"/>
 
-        <ImageView
-            android:id="@+id/userJoin_profileImg"
-            android:src="@drawable/ic_launcher_foreground"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_marginBottom="20dp"/>
+        <androidx.cardview.widget.CardView
+            app:cardUseCompatPadding="true"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_centerHorizontal="true"
+            android:elevation="50dp"
+            app:cardCornerRadius="75dp">
+
+            <ImageView
+                android:id="@+id/userJoin_profileImg"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/ic_launcher_foreground" />
+        </androidx.cardview.widget.CardView>
 
         <TextView
             android:text="닉네임"
             android:textSize="20dp"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -78,12 +87,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="20dp"
+            android:maxLength="10"
+            android:padding="10dp"
             android:hint="닉네임을 적어주세요."
             android:layout_marginBottom="20dp"/>
 
         <TextView
             android:text="한줄소개"
             android:textSize="20dp"
+            android:textStyle="bold"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
@@ -91,6 +103,11 @@
             android:id="@+id/userJoin_info"
             android:hint="한줄소개를 적어주세요."
             android:textSize="20dp"
+            android:padding="10dp"
+            android:lines="3"
+            android:gravity="top|left"
+            android:inputType="textMultiLine"
+            android:maxLength="50"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"/>
