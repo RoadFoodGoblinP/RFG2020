@@ -49,6 +49,8 @@ public class UserJoin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplication(), Index.class);
+                intent.putExtra("nickname", nickname);
+                intent.putExtra("profileImgUrl", profileImgUrl);
                 startActivity(intent);
             }
         });

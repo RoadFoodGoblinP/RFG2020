@@ -14,12 +14,13 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 
+import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.kakao.auth.Session;
 
 public class Feed extends Fragment {
     private View view;
-    private ImageView feed_profile;
+    private ImageView feed_profileImg, feed_profile;
     private FloatingActionButton feed_WriteBtn;
     private LinearLayout feed_AllFeed;
 
@@ -29,8 +30,15 @@ public class Feed extends Fragment {
         view = inflater.inflate(R.layout.activity_feed, container, false);
 
         feed_profile = view.findViewById(R.id.feed_profile);
+        feed_profileImg = view.findViewById(R.id.feed_profileImg);
         feed_profile.setBackground(new ShapeDrawable(new OvalShape()));
         feed_profile.setClipToOutline(true);
+
+        Intent intent = getActivity().getIntent();
+        String nickname = intent.getExtras().getString("nickname");
+        String profileImgUrl = intent.getExtras().getString("profileImgUrl");
+
+        Glide.with(this).load(profileImgUrl).into(feed_profileImg);
 
 
         // 회원 프로필 화면으로 이동 (UserProfile)
