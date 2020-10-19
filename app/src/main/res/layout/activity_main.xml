@@ -13,31 +13,22 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:fontFamily="@font/font_rfg"
-        android:text="길거리 먹깨비"
+        android:text="길거리\n먹깨비"
         android:textSize="50dp"
-        android:textAlignment="center"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"/>
+        android:textAlignment="center"
+        android:textColor="#000"/>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="30dp"/>
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src="@drawable/logo_big"
+        android:layout_marginBottom="10dp"/>
 
     <com.kakao.usermgmt.LoginButton
         android:id="@+id/login_btn_kakaologin"
         android:layout_width="350dp"
-        android:layout_height="wrap_content" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="15dp"/>
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"/>
 
     <LinearLayout
         android:layout_width="wrap_content"
