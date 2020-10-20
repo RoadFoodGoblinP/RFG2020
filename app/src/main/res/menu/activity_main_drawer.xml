@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_QRcamera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/menu_QRcamera" />
+        <item
+            android:id="@+id/nav_Userprofile"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/menu_Userprofile" />
+        <item
+            android:id="@+id/nav_Like"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_Like" />
+        <item
+            android:id="@+id/nav_Bookmark"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_Bookmark" />
+        <item
+            android:id="@+id/nav_Settings"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_Settings" />
+        <item
+            android:id="@+id/nav_Events"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/menu_Events" />
+    </group>
+</menu>
