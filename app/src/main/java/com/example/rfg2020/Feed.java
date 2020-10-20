@@ -31,8 +31,11 @@ public class Feed extends Fragment {
 
         feed_profile = view.findViewById(R.id.feed_profile);
         feed_profileImg = view.findViewById(R.id.feed_profileImg);
+
         feed_profile.setBackground(new ShapeDrawable(new OvalShape()));
         feed_profile.setClipToOutline(true);
+        feed_profileImg.setBackground(new ShapeDrawable(new OvalShape()));
+        feed_profileImg.setClipToOutline(true);
 
         Intent intent = getActivity().getIntent();
         String nickname = intent.getExtras().getString("nickname");

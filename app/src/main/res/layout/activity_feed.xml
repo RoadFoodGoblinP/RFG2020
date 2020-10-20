@@ -16,19 +16,21 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#FF9800">
+            android:background="#FF9800"
+            app:contentInsetStart="10dp">
 
             <LinearLayout
-                android:layout_marginRight="15dp"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:layout_marginRight="10dp">
 
                 <ImageView
                     android:id="@+id/feed_profileImg"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="centerCrop"
                     android:src="@drawable/profile_default"/>
 
                 <ImageView
@@ -43,8 +45,8 @@
                     <TextView
                         android:text="길거리 먹깨비"
                         android:textColor="#fff"
-                        android:textSize="24dp"
-                        android:textStyle="bold"
+                        android:textSize="27dp"
+                        android:fontFamily="@font/font_rfg"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -178,13 +180,13 @@
                         <!--답글-->
                         <LinearLayout
                             android:gravity="center_vertical"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
                                 android:src="@drawable/replies"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"/>
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"/>
                             <TextView
                                 android:text="153"
                                 android:textSize="17dp"
@@ -195,13 +197,13 @@
                         <!--좋아요-->
                         <LinearLayout
                             android:gravity="center_vertical"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="20dp"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                             <ImageView
                                 android:src="@drawable/likes"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"/>
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"/>
                             <TextView
                                 android:text="1.9K"
                                 android:textSize="17dp"
@@ -217,8 +219,8 @@
                             android:layout_height="wrap_content">
                             <ImageView
                                 android:src="@drawable/pictures"
-                                android:layout_width="25dp"
-                                android:layout_height="25dp"/>
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"/>
                             <TextView
                                 android:text="3"
                                 android:textSize="17dp"
@@ -232,8 +234,8 @@
                             android:layout_weight="1"/>
                         <ImageView
                             android:src="@drawable/bookmark"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
                     </LinearLayout>
                 </LinearLayout>
 
@@ -252,7 +254,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginRight="20dp"
         android:backgroundTint="#f78025"
-        android:src="@drawable/write"
+        android:src="@drawable/write_feed"
         app:borderWidth="0dp"
         app:fabSize="normal"/>
 
