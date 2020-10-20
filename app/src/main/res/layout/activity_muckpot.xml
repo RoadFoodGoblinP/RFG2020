@@ -16,10 +16,11 @@
         <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:background="#FF9800">
+            android:background="#FF9800"
+            app:contentInsetStart="10dp">
 
             <LinearLayout
-                android:layout_marginRight="15dp"
+                android:layout_marginRight="10dp"
                 android:gravity="center_vertical"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -27,8 +28,8 @@
 
                 <ImageView
                     android:src="@drawable/profile_default"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"/>
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"/>
 
                 <ImageView
                     android:src="@android:color/transparent"
@@ -75,7 +76,7 @@
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="20dp">
+                android:padding="15dp">
 
                 <!-- 한 개의 먹팟 레이아웃 -->
                 <LinearLayout
@@ -87,8 +88,8 @@
                     <!-- 먹팟 썸네일 이미지 -->
                     <ImageView
                         android:id="@+id/muck_Img"
-                        android:layout_width="110dp"
-                        android:layout_height="110dp"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
                         android:src="@drawable/ic_launcher_background" />
 
                     <!-- 텍스트 전체 레이아웃 -->
@@ -127,8 +128,7 @@
                         <!-- 내용 미리보기 -->
                         <LinearLayout
                             android:layout_width="wrap_content"
-                            android:layout_height="50dp"
-                            android:layout_marginBottom="5dp">
+                            android:layout_height="50dp">
 
                             <TextView
                                 android:id="@+id/muck_TextPreview"

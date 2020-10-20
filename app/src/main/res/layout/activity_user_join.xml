@@ -11,10 +11,11 @@
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:background="#FF9800">
+        android:background="#FF9800"
+        app:contentInsetStart="10dp">
 
         <LinearLayout
-            android:layout_marginRight="15dp"
+            android:layout_marginRight="10dp"
             android:gravity="center_vertical"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -74,6 +75,7 @@
                 android:layout_width="150dp"
                 android:layout_height="150dp"
                 android:layout_gravity="center"
+                android:scaleType="centerCrop"
                 android:src="@drawable/ic_launcher_foreground" />
             <ImageView
                 android:layout_width="200dp"
