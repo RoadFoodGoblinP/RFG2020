@@ -2,12 +2,15 @@ package com.example.rfg2020;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.fragment.app.Fragment;
 
 import android.content.Intent;
 import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +26,7 @@ public class Feed extends Fragment {
     private ImageView feed_profileImg, feed_profile;
     private FloatingActionButton feed_WriteBtn;
     private LinearLayout feed_AllFeed;
+    private DrawerLayout drawer_layout;
 
     @Nullable
     @Override
@@ -31,6 +35,8 @@ public class Feed extends Fragment {
 
         feed_profile = view.findViewById(R.id.feed_profile);
         feed_profileImg = view.findViewById(R.id.feed_profileImg);
+        drawer_layout = view.findViewById(R.id.drawer_layout);
+
         feed_profile.setBackground(new ShapeDrawable(new OvalShape()));
         feed_profile.setClipToOutline(true);
 
@@ -40,6 +46,13 @@ public class Feed extends Fragment {
 
         Glide.with(this).load(profileImgUrl).into(feed_profileImg);
 
+        // 상단바 프로필 사진 클릭시 드로어메뉴 등장
+        feed_profileImg.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                drawer_layout.openDrawer(GravityCompat.START);
+            }
+        });
 
         // 회원 프로필 화면으로 이동 (UserProfile)
         feed_profile.setOnClickListener(new View.OnClickListener() {
