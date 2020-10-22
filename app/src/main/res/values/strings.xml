@@ -1,4 +1,18 @@
 <resources>
     <string name="app_name">길거리 먹깨비</string>
     <string name="kakao_app_key">20313f342496c47f409cb9d8d741467b</string>
+    <string name="title_activity_user_draw">UserDraw</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_QRcamera">QRcamera</string>
+    <string name="menu_Userprofile">Userprofile</string>
+    <string name="menu_Like">Like</string>
+    <string name="menu_Bookmark">Bookmark</string>
+    <string name="menu_Settings">Settings</string>
+    <string name="menu_Events">Events</string>
 </resources>
