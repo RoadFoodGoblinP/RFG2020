@@ -148,9 +148,20 @@
                             android:src="@android:color/holo_green_dark" />
                     </LinearLayout>
 
-                    <!--본문 텍스트 영역-->
+                    <!--본문 이미지 영역-->
                     <LinearLayout
                         android:layout_marginVertical="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <ImageView
+                            android:src="@android:color/holo_purple"
+                            android:layout_width="match_parent"
+                            android:layout_height="180dp"/>
+                    </LinearLayout>
+
+                    <!--본문 텍스트 영역-->
+                    <LinearLayout
+                        android:layout_marginBottom="10dp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
                         <TextView
@@ -158,16 +169,6 @@
                             android:text="테스트테스2트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"/>
-                    </LinearLayout>
-
-                    <!--본문 이미지 영역-->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:src="@android:color/holo_purple"
-                            android:layout_width="match_parent"
-                            android:layout_height="180dp"/>
                     </LinearLayout>
 
                     <!--하단 영역-->

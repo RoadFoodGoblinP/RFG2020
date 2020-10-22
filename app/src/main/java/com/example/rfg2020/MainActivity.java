@@ -1,6 +1,7 @@
 package com.example.rfg2020;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,6 +24,7 @@ import com.kakao.util.OptionalBoolean;
 import com.kakao.util.exception.KakaoException;
 
 public class MainActivity extends AppCompatActivity {
+
     Button Login_home, btn_logout;
     private SessionCallback sessionCallback = new SessionCallback();
 
@@ -102,6 +104,10 @@ public class MainActivity extends AppCompatActivity {
                     Log.e("KAKAO_API", "사용자 정보 요청 실패: " + errorResult);
                 }
 
+                private String getURLForResource(int resId) {
+                    return Uri.parse("android.resource://" + R.class.getPackage().getName() + "/" + resId).toString();
+                }
+
                 @Override
                 public void onSuccess(MeV2Response result) {
                     Log.i("KAKAO_API", "사용자 아이디: " + result.getId());
@@ -124,6 +130,7 @@ public class MainActivity extends AppCompatActivity {
 
                         // 프로필
                         Profile profile = kakaoAccount.getProfile();
+                        String drawablePath = getURLForResource(R.drawable.profile_default);
 
                         if (profile != null) {
                             Log.d("KAKAO_API", "nickname: " + profile.getNickname());
@@ -131,8 +138,13 @@ public class MainActivity extends AppCompatActivity {
                             Log.d("KAKAO_API", "thumbnail image: " + profile.getThumbnailImageUrl());
 
                             Intent intent = new Intent(MainActivity.this, UserJoin.class);
+                            intent.putExtra("id", result.getId());
                             intent.putExtra("nickname", profile.getNickname());
-                            intent.putExtra("profileImgUrl", profile.getProfileImageUrl());
+                            if(profile.getProfileImageUrl()==null) {
+                                intent.putExtra("profileImgUrl", drawablePath);
+                            } else {
+                                intent.putExtra("profileImgUrl", profile.getProfileImageUrl());
+                            }
                             startActivity(intent);
 
                         } else if (kakaoAccount.profileNeedsAgreement() == OptionalBoolean.TRUE) {
