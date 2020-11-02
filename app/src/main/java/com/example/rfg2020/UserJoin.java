@@ -8,14 +8,23 @@ import android.graphics.drawable.ShapeDrawable;
 import android.graphics.drawable.shapes.OvalShape;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
@@ -25,9 +34,6 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public class UserJoin extends AppCompatActivity {
-
-    private static String IP_ADDRESS = "10.0.2.2";
-    private static String TAG = "phptest";
 
     EditText userJoin_nickname, userJoin_info;
     ImageView userJoin_back, userJoin_profileImg;
@@ -49,15 +55,16 @@ public class UserJoin extends AppCompatActivity {
         userJoin_profileImg.setClipToOutline(true);
 
         Intent intent = getIntent();
-        long memberno = intent.getExtras().getLong("id");
-        String password = Long.toString(memberno) + '0';
-        String nickname = intent.getExtras().getString("nickname");
-        String name = intent.getExtras().getString("nickname");
-        String oneinfo = userJoin_info.getText().toString();
-        String profileImgUrl = intent.getExtras().getString("profileImgUrl");
+        int MemberNo = (int)intent.getExtras().getLong("id");
+        String Password = MemberNo + "0";
+        String Nickname = intent.getExtras().getString("nickname");
+        String Name = intent.getExtras().getString("nickname");
+        String OneInfo = userJoin_info.getText().toString();
+        String ProfileImg = intent.getExtras().getString("profileImgUrl");
 
-        userJoin_nickname.setText(nickname);
-        Glide.with(this).load(profileImgUrl).into(userJoin_profileImg);
+
+        userJoin_nickname.setText(Nickname);
+        Glide.with(this).load(ProfileImg).into(userJoin_profileImg);
 
         userJoin_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,10 +74,31 @@ public class UserJoin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplication(), Index.class);
-                intent.putExtra("nickname", nickname);
-                intent.putExtra("profileImgUrl", profileImgUrl);
-                startActivity(intent);
+                Response.Listener<String> responseListener = new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            boolean success = jsonObject.getBoolean("success");
+                            if (success) { // 회원등록에 성공한 경우
+                                Toast.makeText(getApplicationContext(), "회원 등록에 성공하였습니다.", Toast.LENGTH_SHORT).show();
+                                Intent intent = new Intent(UserJoin.this, Feed.class);
+                                startActivity(intent);
+                            } else { // 회원등록에 실패한 경우
+                                Toast.makeText(getApplicationContext(), "회원 등록에 실패하였습니다.", Toast.LENGTH_SHORT).show();
+                                return;
+                            }
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+
+                // 서버로 Volley를 이용해서 요청을 함.
+                RegisterRequest registerRequest = new RegisterRequest(MemberNo, Password, Nickname, Name, OneInfo, ProfileImg, responseListener);
+                RequestQueue queue = Volley.newRequestQueue(UserJoin.this);
+                queue.add(registerRequest);
             }
         });
     }

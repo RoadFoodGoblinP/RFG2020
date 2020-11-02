@@ -15,11 +15,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-
         <activity
             android:name=".UserDraw"
             android:label="@string/title_activity_user_draw"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
 
         <meta-data
             android:name="com.google.android.actions"
@@ -35,6 +34,7 @@
         <activity android:name=".UserProfile" />
         <activity android:name=".UserJoin" />
         <activity android:name=".MuckpotDetail" />
+        <activity android:name=".Dbtest"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

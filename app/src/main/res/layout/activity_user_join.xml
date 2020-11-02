@@ -55,6 +55,7 @@
         android:padding="30dp"
         android:gravity="center">
         <TextView
+            android:id="@+id/result"
             android:text="프로필 설정"
             android:textStyle="bold"
             android:gravity="center"
