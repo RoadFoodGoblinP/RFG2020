@@ -75,33 +75,9 @@ public class UserJoin extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Response.Listener<String> responseListener = new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
-                            if (success) { // 회원등록에 성공한 경우
-                                Toast.makeText(getApplicationContext(), "회원 등록에 성공하였습니다.", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(UserJoin.this, Feed.class);
-                                startActivity(intent);
-                            } else { // 회원등록에 실패한 경우
-                                Toast.makeText(getApplicationContext(), "회원 등록에 실패하였습니다.", Toast.LENGTH_SHORT).show();
-                                return;
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-                };
-
-                // 서버로 Volley를 이용해서 요청을 함.
-                RegisterRequest registerRequest = new RegisterRequest(MemberNo, Password, Nickname, Name, OneInfo, ProfileImg, responseListener);
-                RequestQueue queue = Volley.newRequestQueue(UserJoin.this);
-                queue.add(registerRequest);
-
-                Intent intent = new Intent(UserJoin.this, Index.class);
+                Intent intent = new Intent(getApplication(), Index.class);
+                intent.putExtra("nickname", Nickname);
+                intent.putExtra("profileImgUrl", ProfileImg);
                 startActivity(intent);
             }
         });

@@ -17,10 +17,10 @@ public class Search extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.activity_search, container, false);
-
-        ViewPager vp = view.findViewById(R.id.searchViewpager);
-        VPAdapter adapter = new VPAdapter(getActivity().getSupportFragmentManager());
-        vp.setAdapter(adapter);
+//
+//        ViewPager vp = view.findViewById(R.id.searchViewpager);
+//        VPAdapter adapter = new VPAdapter(getActivity().getSupportFragmentManager());
+//        vp.setAdapter(adapter);
 
         return view;
     }

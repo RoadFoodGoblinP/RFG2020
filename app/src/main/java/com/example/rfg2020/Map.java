@@ -7,13 +7,18 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 
 import android.Manifest;
+import android.content.Intent;
+import android.graphics.drawable.ShapeDrawable;
+import android.graphics.drawable.shapes.OvalShape;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.naver.maps.map.LocationTrackingMode;
 import com.naver.maps.map.MapFragment;
 import com.naver.maps.map.NaverMap;
@@ -25,6 +30,7 @@ import com.naver.maps.map.util.FusedLocationSource;
 public class Map extends Fragment implements OnMapReadyCallback {
     private static final String TAG = "activity_map";
     private View view;
+    private ImageView map_profileImg;
     private FusedLocationSource mLocationSource;
     private NaverMap mNaverMap;
     private TextView toolbarText;
@@ -34,6 +40,12 @@ public class Map extends Fragment implements OnMapReadyCallback {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        view = inflater.inflate(R.layout.activity_map, container, false);
+        map_profileImg = view.findViewById(R.id.map_profileImg);
+
+        map_profileImg.setBackground(new ShapeDrawable(new OvalShape()));
+        map_profileImg.setClipToOutline(true);
+
         // 지도 객체 생성
         FragmentManager fm = getActivity().getSupportFragmentManager();
         MapFragment mapFragment = (MapFragment) fm.findFragmentById(R.id.map);
@@ -48,8 +60,6 @@ public class Map extends Fragment implements OnMapReadyCallback {
 
         // 위치를 반환하는 구현체인 FusedLocationSource 생성
         mLocationSource = new FusedLocationSource(this, PERMISSION_REQUEST_CODE);
-
-        view = inflater.inflate(R.layout.activity_map, container, false);
         return view;
     }
 
@@ -74,7 +84,8 @@ public class Map extends Fragment implements OnMapReadyCallback {
 
         // 툴바 텍스트뷰에 현재 주소 찍기
         toolbarText = view.findViewById(R.id.map_ToolbarText);
-        toolbarText.setText(mNaverMap.getLocationSource().toString());        // 여기까지 툴바 텍스트뷰에 주소 찍기
+//        toolbarText.setText(mNaverMap.getLocationSource().toString());        // 여기까지 툴바 텍스트뷰에 주소 찍기
+        toolbarText.setText("서울특별시 성동구 행당동");
 
         // 권한확인. 결과는 onRequestPermissionsResult 콜백 매서드 호출
         ActivityCompat.requestPermissions(this.getActivity(), PERMISSIONS, PERMISSION_REQUEST_CODE);

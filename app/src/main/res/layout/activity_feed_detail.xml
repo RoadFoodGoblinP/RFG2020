@@ -73,9 +73,10 @@
                     <ImageView
                         android:id="@+id/feed_profile"
                         android:layout_weight="0"
+                        android:scaleType="centerCrop"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        android:src="@drawable/profile_default" />
+                        android:src="@drawable/sample_propic" />
 
                     <LinearLayout
                         android:layout_width="fill_parent"
@@ -83,25 +84,25 @@
                         android:layout_marginHorizontal="10dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
+
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="5dp"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
-
                             <TextView
+                                android:id="@+id/feed_nickname"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="7dp"
-                                android:text="닉네임"
+                                android:text="ES"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="게시시간"
+                                android:text="10월 31일"
                                 android:textSize="15dp" />
                         </LinearLayout>
 
@@ -110,12 +111,10 @@
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
                             android:orientation="horizontal">
-
                             <ImageView
                                 android:layout_width="15dp"
                                 android:layout_height="15dp"
                                 android:src="@drawable/location" />
-
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -125,21 +124,27 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <ImageButton
+                    <ImageView
                         android:layout_weight="0"
-                        android:layout_width="20dp"
-                        android:layout_height="60dp"
-                        android:src="@android:color/holo_green_dark" />
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/more" />
                 </LinearLayout>
-
                 <!--본문 텍스트 영역-->
                 <LinearLayout
+                    android:orientation="vertical"
                     android:layout_marginVertical="10dp"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
                         android:textSize="22dp"
-                        android:text="테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트"
+                        android:text="엽기 떡볶이 너무 맛있어요~♡\n다음에 또 먹으러 오고 싶어요!"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:textColor="#F49200"
+                        android:textSize="22dp"
+                        android:text="#떡볶이 #맛집 #왕십리 #한양대"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -149,7 +154,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <ImageView
-                        android:src="@android:color/holo_purple"
+                        android:src="@drawable/ddeokqokgi"
+                        android:scaleType="centerCrop"
                         android:layout_width="match_parent"
                         android:layout_height="180dp"/>
                 </LinearLayout>
@@ -164,15 +170,15 @@
                     <!--답글-->
                     <LinearLayout
                         android:gravity="center_vertical"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
                             android:src="@drawable/replies"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
                         <TextView
-                            android:text="153"
+                            android:text="15"
                             android:textSize="17dp"
                             android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
@@ -181,15 +187,15 @@
                     <!--좋아요-->
                     <LinearLayout
                         android:gravity="center_vertical"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
                             android:src="@drawable/likes"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
                         <TextView
-                            android:text="1.9K"
+                            android:text="30"
                             android:textSize="17dp"
                             android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
@@ -203,10 +209,10 @@
                         android:layout_height="wrap_content">
                         <ImageView
                             android:src="@drawable/pictures"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
                         <TextView
-                            android:text="3"
+                            android:text="1"
                             android:textSize="17dp"
                             android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
@@ -218,8 +224,8 @@
                         android:layout_weight="1"/>
                     <ImageView
                         android:src="@drawable/bookmark"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"/>
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
                 </LinearLayout>
             </LinearLayout>
 
@@ -228,6 +234,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:layout_marginHorizontal="20dp"
                 android:padding="30dp">
 
                 <!--프로필 영역-->
@@ -261,14 +268,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="7dp"
-                                android:text="닉네임"
-                                android:textSize="20dp"
+                                android:text="떡볶이 슬레이어"
+                                android:textSize="19dp"
                                 android:textStyle="bold" />
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="게시시간"
+                                android:text="10월 31일"
                                 android:textSize="15dp" />
                         </LinearLayout>
 
@@ -292,11 +299,11 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <ImageButton
+                    <ImageView
                         android:layout_weight="0"
-                        android:layout_width="20dp"
-                        android:layout_height="60dp"
-                        android:src="@android:color/holo_green_dark" />
+                        android:layout_width="10dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/more" />
                 </LinearLayout>
 
                 <!--본문 텍스트 영역-->
@@ -305,8 +312,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content">
                     <TextView
-                        android:textSize="20dp"
-                        android:text="테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트테스트"
+                        android:textSize="19dp"
+                        android:text="오늘 오랜만에 대면 수업이라 학교 끝나고 엽떡 먹으러 갔는데ㅋ 역시 맛집 ㄹㅇㅋㅋ"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
@@ -314,12 +321,7 @@
                 <!--본문 이미지 영역-->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <ImageView
-                        android:src="@android:color/holo_purple"
-                        android:layout_width="match_parent"
-                        android:layout_height="180dp"/>
-                </LinearLayout>
+                    android:layout_height="wrap_content"/>
 
                 <!--하단 영역-->
                 <LinearLayout
@@ -331,15 +333,15 @@
                     <!--답글-->
                     <LinearLayout
                         android:gravity="center_vertical"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
                             android:src="@drawable/replies"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
                         <TextView
-                            android:text="153"
+                            android:text="0"
                             android:textSize="17dp"
                             android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
@@ -348,15 +350,15 @@
                     <!--좋아요-->
                     <LinearLayout
                         android:gravity="center_vertical"
-                        android:layout_marginRight="10dp"
+                        android:layout_marginRight="20dp"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content">
                         <ImageView
                             android:src="@drawable/likes"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"/>
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"/>
                         <TextView
-                            android:text="1.9K"
+                            android:text="10"
                             android:textSize="17dp"
                             android:layout_marginLeft="5dp"
                             android:layout_width="wrap_content"
@@ -364,32 +366,15 @@
 
                     </LinearLayout>
                     <!--사진-->
-                    <LinearLayout
-                        android:gravity="center_vertical"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
-                        <ImageView
-                            android:src="@drawable/pictures"
-                            android:layout_width="25dp"
-                            android:layout_height="25dp"/>
-                        <TextView
-                            android:text="3"
-                            android:textSize="17dp"
-                            android:layout_marginLeft="5dp"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"/>
-                    </LinearLayout>
                     <View
                         android:layout_width="0dp"
                         android:layout_height="0dp"
                         android:layout_weight="1"/>
                     <ImageView
                         android:src="@drawable/bookmark"
-                        android:layout_width="25dp"
-                        android:layout_height="25dp"/>
-
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"/>
                 </LinearLayout>
-
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

@@ -27,6 +27,7 @@
                 android:orientation="horizontal">
 
                 <ImageView
+                    android:id="@+id/muck_profilePic"
                     android:src="@drawable/profile_default"
                     android:layout_width="40dp"
                     android:layout_height="40dp"/>
@@ -45,7 +46,7 @@
                     <TextView
                         android:text="먹팟"
                         android:textColor="#fff"
-                        android:textSize="24dp"
+                        android:textSize="20dp"
                         android:textStyle="bold"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
@@ -90,7 +91,8 @@
                         android:id="@+id/muck_Img"
                         android:layout_width="100dp"
                         android:layout_height="100dp"
-                        android:src="@drawable/ic_launcher_background" />
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/mara" />
 
                     <!-- 텍스트 전체 레이아웃 -->
                     <LinearLayout
@@ -113,7 +115,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginRight="7dp"
-                                android:text="제목"
+                                android:text="행당동 마라팟"
                                 android:textSize="20dp"
                                 android:textStyle="bold" />
 
@@ -121,7 +123,7 @@
                                 android:id="@+id/muck_Time"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="게시시간"
+                                android:text="7시간전"
                                 android:textSize="14dp" />
                         </LinearLayout>
 
@@ -134,7 +136,7 @@
                                 android:id="@+id/muck_TextPreview"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:text="내용내용내용내용내용내용내용내용내용내용내용내용"
+                                android:text="행당동이신 분들 저랑 같이 마라탕 먹어주세요 너무 먹고 싶음 ㅠㅠ!!!!!!!!!!"
                                 android:textSize="15dp" />
                         </LinearLayout>
 
@@ -157,7 +159,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
-                                android:text="서울시 성동구 한양여대"
+                                android:text="서울시 성동구 행당동"
                                 android:textSize="14dp" />
 
                             <View
@@ -175,7 +177,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_marginLeft="5dp"
-                                android:text="1/5"
+                                android:text="1/3"
                                 android:textSize="14dp" />
                         </LinearLayout>
                     </LinearLayout>

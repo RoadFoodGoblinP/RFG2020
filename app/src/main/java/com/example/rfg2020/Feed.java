@@ -16,6 +16,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -23,9 +24,10 @@ import com.kakao.auth.Session;
 
 public class Feed extends Fragment {
     private View view;
-    private ImageView feed_profileImg, feed_profile;
+    private ImageView feed_profileImg, feed_profile, feed_profileW;
+    private TextView feed_nicknameW, refresh;
     private FloatingActionButton feed_WriteBtn;
-    private LinearLayout feed_AllFeed;
+    private LinearLayout feed_AllFeed, feed_AllFeed2;
     private DrawerLayout drawer_layout;
 
     @Nullable
@@ -36,17 +38,35 @@ public class Feed extends Fragment {
         feed_profile = view.findViewById(R.id.feed_profile);
         feed_profileImg = view.findViewById(R.id.feed_profileImg);
         drawer_layout = view.findViewById(R.id.drawer_layout);
+        feed_profileW = view.findViewById(R.id.feed_profileW);
+        feed_nicknameW = view.findViewById(R.id.feed_nicknameW);
+        feed_AllFeed2 = view.findViewById(R.id.feed_AllFeed2);
+        refresh = view.findViewById(R.id.refresh);
 
         feed_profile.setBackground(new ShapeDrawable(new OvalShape()));
         feed_profile.setClipToOutline(true);
         feed_profileImg.setBackground(new ShapeDrawable(new OvalShape()));
         feed_profileImg.setClipToOutline(true);
+        feed_profileW.setBackground(new ShapeDrawable(new OvalShape()));
+        feed_profileW.setClipToOutline(true);
 
         Intent intent = getActivity().getIntent();
         String nickname = intent.getExtras().getString("nickname");
         String profileImgUrl = intent.getExtras().getString("profileImgUrl");
 
+        intent.putExtra("nickname", nickname);
+        intent.putExtra("profileImgUrl", profileImgUrl);
+
         Glide.with(this).load(profileImgUrl).into(feed_profileImg);
+        Glide.with(this).load(profileImgUrl).into(feed_profileW);
+        feed_nicknameW.setText(nickname);
+
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                feed_AllFeed2.setVisibility(View.VISIBLE);
+            }
+        });
 
         // 상단바 프로필 사진 클릭시 드로어메뉴 등장
         feed_profileImg.setOnClickListener(new View.OnClickListener() {
