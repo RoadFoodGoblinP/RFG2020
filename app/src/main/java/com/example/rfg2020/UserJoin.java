@@ -63,6 +63,18 @@ public class UserJoin extends AppCompatActivity {
         String OneInfo = userJoin_info.getText().toString();
         String ProfileImg = intent.getExtras().getString("profileImgUrl");
 
+        userJoin_nickname.setText(Nickname);
+        userJoin_success.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplication(), Index.class);
+                intent.putExtra("nickname", Nickname);
+                intent.putExtra("profileImgUrl", ProfileImg);
+                startActivity(intent);
+            }
+        });
+
 
         userJoin_nickname.setText(Nickname);
         Glide.with(this).load(ProfileImg).into(userJoin_profileImg);
@@ -71,7 +83,7 @@ public class UserJoin extends AppCompatActivity {
             @Override
             public void onClick(View view) { finish(); }});
 
-        userJoin_success.setOnClickListener(new View.OnClickListener() {
+        /*userJoin_success.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -92,7 +104,6 @@ public class UserJoin extends AppCompatActivity {
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
-
                     }
                 };
 
@@ -104,7 +115,6 @@ public class UserJoin extends AppCompatActivity {
                 Intent intent = new Intent(UserJoin.this, Index.class);
                 startActivity(intent);
             }
-        });
+        });*/
     }
-
 }
