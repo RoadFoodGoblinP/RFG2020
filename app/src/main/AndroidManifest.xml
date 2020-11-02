@@ -9,9 +9,9 @@
     <application
         android:name=".GlobalApplication"
         android:allowBackup="true"
-        android:icon="@drawable/logo"
+        android:icon="@mipmap/ic_main"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ic_main_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
@@ -34,7 +34,6 @@
         <activity android:name=".UserProfile" />
         <activity android:name=".UserJoin" />
         <activity android:name=".MuckpotDetail" />
-        <activity android:name=".Dbtest"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

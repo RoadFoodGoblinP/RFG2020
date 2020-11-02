@@ -22,6 +22,7 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 import com.bumptech.glide.Glide;
+import com.kakao.sdk.user.model.User;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -99,6 +100,9 @@ public class UserJoin extends AppCompatActivity {
                 RegisterRequest registerRequest = new RegisterRequest(MemberNo, Password, Nickname, Name, OneInfo, ProfileImg, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(UserJoin.this);
                 queue.add(registerRequest);
+
+                Intent intent = new Intent(UserJoin.this, Index.class);
+                startActivity(intent);
             }
         });
     }

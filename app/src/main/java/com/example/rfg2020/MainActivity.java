@@ -140,6 +140,7 @@ public class MainActivity extends AppCompatActivity {
                             Intent intent = new Intent(MainActivity.this, UserJoin.class);
                             intent.putExtra("id", result.getId());
                             intent.putExtra("nickname", profile.getNickname());
+
                             if(profile.getProfileImageUrl()==null) {
                                 intent.putExtra("profileImgUrl", drawablePath);
                             } else {
