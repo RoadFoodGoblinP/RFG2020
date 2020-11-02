@@ -148,7 +148,7 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_marginLeft="5dp"
-                                    android:text="인천광역시 미추홀구 도화동"
+                                    android:text="서울특별시 마포구 연남동"
                                     android:textSize="15dp" />
                             </LinearLayout>
                         </LinearLayout>

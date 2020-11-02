@@ -16,7 +16,6 @@ import android.widget.Toast;
 import com.gun0912.tedpermission.PermissionListener;
 import com.gun0912.tedpermission.TedPermission;
 
-import java.io.File;
 import java.util.ArrayList;
 
 public class FeedWrite extends AppCompatActivity {
@@ -89,7 +88,7 @@ public class FeedWrite extends AppCompatActivity {
         }
     }
 
-    // 카메라 권한 설정
+    // 갤러리 권한 설정
     private void tedPermission() {
         PermissionListener permissionListener = new PermissionListener() {
             @Override
