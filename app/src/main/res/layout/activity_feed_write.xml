@@ -95,10 +95,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
                 <ImageView
-                    android:src="@android:color/holo_blue_bright"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginRight="5dp"/>
+                    android:id="@+id/feed_write_img"
+                    android:src="@color/browser_actions_title_color"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dp" />
             </LinearLayout>
 
         </LinearLayout>

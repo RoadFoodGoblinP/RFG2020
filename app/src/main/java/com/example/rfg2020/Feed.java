@@ -26,6 +26,7 @@ public class Feed extends Fragment {
     private ImageView feed_profileImg, feed_profile;
     private FloatingActionButton feed_WriteBtn;
     private LinearLayout feed_AllFeed;
+    private DrawerLayout drawer_layout;
 
     @Nullable
     @Override
@@ -34,7 +35,6 @@ public class Feed extends Fragment {
 
         feed_profile = view.findViewById(R.id.feed_profile);
         feed_profileImg = view.findViewById(R.id.feed_profileImg);
-
         feed_profile.setBackground(new ShapeDrawable(new OvalShape()));
         feed_profile.setClipToOutline(true);
         feed_profileImg.setBackground(new ShapeDrawable(new OvalShape()));
