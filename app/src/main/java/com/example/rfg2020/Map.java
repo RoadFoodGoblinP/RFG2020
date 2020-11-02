@@ -85,7 +85,7 @@ public class Map extends Fragment implements OnMapReadyCallback {
         // 툴바 텍스트뷰에 현재 주소 찍기
         toolbarText = view.findViewById(R.id.map_ToolbarText);
 //        toolbarText.setText(mNaverMap.getLocationSource().toString());        // 여기까지 툴바 텍스트뷰에 주소 찍기
-        toolbarText.setText("서울특별시 성동구 행당동");
+        toolbarText.setText("인천광역시 미추홀구 도화동");
 
         // 권한확인. 결과는 onRequestPermissionsResult 콜백 매서드 호출
         ActivityCompat.requestPermissions(this.getActivity(), PERMISSIONS, PERMISSION_REQUEST_CODE);

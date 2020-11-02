@@ -28,7 +28,6 @@ public class Feed extends Fragment {
     private TextView feed_nicknameW, refresh;
     private FloatingActionButton feed_WriteBtn;
     private LinearLayout feed_AllFeed, feed_AllFeed2;
-    private DrawerLayout drawer_layout;
 
     @Nullable
     @Override
@@ -37,7 +36,6 @@ public class Feed extends Fragment {
 
         feed_profile = view.findViewById(R.id.feed_profile);
         feed_profileImg = view.findViewById(R.id.feed_profileImg);
-        drawer_layout = view.findViewById(R.id.drawer_layout);
         feed_profileW = view.findViewById(R.id.feed_profileW);
         feed_nicknameW = view.findViewById(R.id.feed_nicknameW);
         feed_AllFeed2 = view.findViewById(R.id.feed_AllFeed2);
@@ -65,14 +63,6 @@ public class Feed extends Fragment {
             @Override
             public void onClick(View view) {
                 feed_AllFeed2.setVisibility(View.VISIBLE);
-            }
-        });
-
-        // 상단바 프로필 사진 클릭시 드로어메뉴 등장
-        feed_profileImg.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                drawer_layout.openDrawer(GravityCompat.START);
             }
         });
 
